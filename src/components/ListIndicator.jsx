@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 const ListIndicator = () => {
   const navigate = useNavigate()
    // Accedo direttamente a myList
-  const myList = useSelector((state) => state.myList)
+  const myList = useSelector((state) => state.myList.content)
 
   return (
     <div className="d-flex justify-content-end my-4">
