@@ -1,7 +1,4 @@
 const initialState = {
-    listOfJobs: {
-        content: [],
-    },
     // lo stato per le aziende preferite
     myList: []  
 }
