@@ -11,22 +11,22 @@ const mainReducer = (state = initialState, action) => {
       return {
         ...state,
         myList: {
-            ...state.myList,
-            // Aggiorno myList.content
-            content: [...state.myList.content, action.payload], 
-          },
+          ...state.myList,
+          // Aggiorno myList.content
+          content: [...state.myList.content, action.payload],
+        },
       };
 
     case "REMOVE_FROM_FAVOURITES":
-        return {
-            ...state,
-            myList: {
-              ...state.myList,
-              content: state.myList.content.filter(
-                (company) => company !== action.payload
-              ), // Filtro myList.content
-            },
-          };
+      return {
+        ...state,
+        myList: {
+          ...state.myList,
+          content: state.myList.content.filter(
+            (company) => company !== action.payload
+          ), // Filtro myList.content
+        },
+      };
 
     default:
       return state;

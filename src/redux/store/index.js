@@ -5,6 +5,6 @@ import mainReducer from "../reducers";
 // semplifica l'import, perchè si può omettere
 
 const store = configureStore({
-    reducer: mainReducer,  //qui ci va il reducer
-})
-export default store
+  reducer: mainReducer, //qui ci va il reducer
+});
+export default store;
