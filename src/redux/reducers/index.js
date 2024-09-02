@@ -2,7 +2,8 @@ const initialState = {
     listOfJobs: {
         content: [],
     },
-    myList: []  // Nuovo stato per le aziende preferite
+    // lo stato per le aziende preferite
+    myList: []  
 }
 
 const mainReducer = (state = initialState, action) => {
@@ -10,14 +11,16 @@ const mainReducer = (state = initialState, action) => {
         case 'ADD_TO_FAVOURITES':
             return {
                 ...state,
-                favouriteCompanies: [...state.myList, action.payload],
+                 // aggiorno myList
+                myList: [...state.myList, action.payload],
             }
 
         case 'REMOVE_FROM_FAVOURITES':
             return {
                 ...state,
-                favouriteCompanies: state.myList.filter(
-                    (company) => company !== action.payload
+                myList: state.myList.filter(
+                    // aggiorno myList
+                    (company) => company !== action.payload 
                 )
             }
 

@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import Job from "./Job";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import ListIndicator from "./ListIndicator";
 
 const CompanySearchResults = () => {
   const [jobs, setJobs] = useState([]);
@@ -43,8 +44,9 @@ if(myList.includes(params.company)) {
       <Row>
         <Col className="my-3">
           <h1 className="display-4">Job posting for: {params.company}</h1>
+          <ListIndicator/>
           <Button onClick={handleList}>
-            {myList.includes(params.company) ?"Remouve" : "Add"}
+            {myList.includes(params.company) ?"Remove" : "Add"}
           </Button>
           {jobs.map(jobData => (
             <Job key={jobData._id} data={jobData} />

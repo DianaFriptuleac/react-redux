@@ -21,7 +21,7 @@ const MainSearch = () => {
         const { data } = await response.json();
         setJobs(data);
       } else {
-        alert("Error fetching results"); 
+        alert("Error fetching results");
       }
     } catch (error) {
       console.log(error);
